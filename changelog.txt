@@ -1,0 +1,6 @@
+Version: 1.1.0
+  - Updated Bootstrap to version 5.2.1
+  - Improved PHP Email From library to ignore server header responses like 409
+
+Version: 1.0.0
+  - Initial Release
