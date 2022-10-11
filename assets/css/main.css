@@ -29,11 +29,64 @@
 }
 
 /*--------------------------------------------------------------
+# Waves
+--------------------------------------------------------------*/
+
+.ocean {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015971;
+  opacity: 0.35;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
   color: var(--color-default);
+
 }
 
 a {
@@ -1920,7 +1973,7 @@ section {
   background-image: url('/assets/img/photos/a2.webp');
   background-size: cover;
   background-position: center;
-  
+
 }
 
 .hero::before {
@@ -1930,8 +1983,8 @@ section {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background: rgb(23,33,39);
-  background: linear-gradient(180deg, rgba(19, 41, 54, 0.322) 0%, rgba(0,0,0,0.8015581232492998) 100%);
+  background: rgb(23, 33, 39);
+  background: linear-gradient(180deg, rgba(19, 41, 54, 0.322) 0%, rgba(0, 0, 0, 0.8015581232492998) 100%);
   backdrop-filter: blur(3.5px);
 }
 
