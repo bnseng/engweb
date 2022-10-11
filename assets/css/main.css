@@ -1917,6 +1917,22 @@ section {
   position: relative;
   background: var(--color-primary);
   padding: 60px 0 0 0;
+  background-image: url('/assets/img/photos/a2.webp');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgb(23,33,39);
+  background: linear-gradient(180deg, rgba(19, 41, 54, 0.322) 0%, rgba(0,0,0,0.8015581232492998) 100%);
+  backdrop-filter: blur(3.5px);
 }
 
 @media (min-width: 1365px) {
